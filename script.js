@@ -24,3 +24,26 @@ Book.prototype.toggleRead = function() {
 	return (this.checkValue)? this.checkValue = false:
 	this.checkValue = true;
 };
+
+function createCard(book) {
+	let card = document.createElement('div');
+	let bookTitles = document.createElement('h2');
+	let bookAuthors = document.createElement('p');
+	let numberOfPages = document.createElement('p');
+	let readStatus = document.createElement('button');
+	const removeBook = document.createElement('button');
+
+	container.appendChild(card);
+	card.appendChild(bookTitles);
+	card.appendChild(bookAuthors);
+	card.appendChild(numberOfPages);
+	card.appendChild(readStatus);
+	card.appendChild(removeBook);
+
+	bookTitles.textContent = book.title;
+	bookAuthors.textContent = `By ${book.author}`;
+	numberOfPages.textContent = `${book.pages} Pages`;
+	readStatus.textContent = book.readState();
+	removeBook.textContent = 'Remove';
+	card.classList.add('cards', 'cards>p:first-of-type');
+}
