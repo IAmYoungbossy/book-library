@@ -7,3 +7,13 @@ const container = document.querySelector('.card-container');
 const check = document.querySelector('#read');
 
 let bookLibrary = [];
+
+function Book (title, author, pages, checkValue) {
+	if (this instanceof Book === false) {
+		return new Book(title, author, pages, checkValue);
+	}
+	this.title = title;
+	this.author = author;
+	this.pages = pages;
+	this.checkValue = checkValue;
+}
