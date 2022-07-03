@@ -28,13 +28,12 @@ function pushToBookLibrary() {
 	bookLibrary.push(new Book(bookTitle.value,
 		bookAuthor.value, bookPages.value, check.checked));
 }
-
 function createCard(book) {
 	let card = document.createElement('div');
 	let bookTitles = document.createElement('h2');
 	let bookAuthors = document.createElement('p');
 	let numberOfPages = document.createElement('p');
-	let readStatus = document.createElement('button');
+	const readStatus = document.createElement('button');
 	const removeBook = document.createElement('button');
 
 	container.appendChild(card);
@@ -50,8 +49,16 @@ function createCard(book) {
 	readStatus.textContent = book.readState();
 	removeBook.textContent = 'Remove';
 	card.classList.add('cards', 'cards>p:first-of-type');
-}
 
+    removeBook.addEventListener('click', () => {
+		bookLibrary.splice(bookLibrary.indexOf(book), 1);
+		updateCardDisplay();
+	});
+	readStatus.addEventListener('click', () => {
+		book.toggleRead();
+		updateCardDisplay();
+	});
+}
 function displayCards() {
 	bookLibrary.forEach((book) => createCard(book));
 }
@@ -62,3 +69,7 @@ function updateCardDisplay() {
 		displayCards();
 	} else displayCards();
 }
+addBook.addEventListener('click', () => {
+	pushToBookLibrary(), updateCardDisplay()
+});
+displayCards();
