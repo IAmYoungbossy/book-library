@@ -17,3 +17,10 @@ function Book (title, author, pages, checkValue) {
 	this.pages = pages;
 	this.checkValue = checkValue;
 }
+Book.prototype.readState = function() {
+	return (this.checkValue)? 'Read': 'Unread';
+};
+Book.prototype.toggleRead = function() {
+	return (this.checkValue)? this.checkValue = false:
+	this.checkValue = true;
+};
