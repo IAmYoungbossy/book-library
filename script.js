@@ -24,6 +24,10 @@ Book.prototype.toggleRead = function() {
 	return (this.checkValue)? this.checkValue = false:
 	this.checkValue = true;
 };
+function pushToBookLibrary() {
+	bookLibrary.push(new Book(bookTitle.value,
+		bookAuthor.value, bookPages.value, check.checked));
+}
 
 function createCard(book) {
 	let card = document.createElement('div');
