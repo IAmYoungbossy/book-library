@@ -47,3 +47,14 @@ function createCard(book) {
 	removeBook.textContent = 'Remove';
 	card.classList.add('cards', 'cards>p:first-of-type');
 }
+
+function displayCards() {
+	bookLibrary.forEach((book) => createCard(book));
+}
+function updateCardDisplay() {
+	if (bookLibrary.length >= 0) {
+		while (container.firstChild)
+		container.removeChild(container.firstChild);
+		displayCards();
+	} else displayCards();
+}
