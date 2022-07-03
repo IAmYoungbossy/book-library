@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Library</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Book Library</h1>
-    
-</body>
+    <button type="button">New Book</button>
+    <div class="modal">
+      <form action="#" method="get" accept-charset="utf-8">
+        <div>
+          <label for="book-title">Book Title</label>
+          <input type="text" name="book-title" id="book-title" />
+        </div>
+        <div>
+          <label for="book-name">Author Name</label>
+          <input type="text" name="book-name" id="book-author" />
+        </div>
+        <div>
+          <label for="book-page">Number Of Pages</label>
+          <input type="number" name="book-page" id="book-pages" />
+        </div>
+        <div>
+          <label for="read">Check If Read</label>
+          <input type="checkbox" name="read" id="read" />
+        </div>
+      </form>
+      <div>
+        <button id="add-book">Add Book</button>
+      </div>
+    </div>
+    <div class="card-container"></div>
+  </body>
 </html>
