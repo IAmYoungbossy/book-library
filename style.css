@@ -1,6 +1,6 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 body {
     height: 100vh;
@@ -17,7 +17,7 @@ body>button:nth-child(2) {
 header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 30px 100px;
+    padding: 30px 10vw;
     background-color: #fffbfb;
     box-shadow: 0px 3px 3px #abb0b6;
 }
