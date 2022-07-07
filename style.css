@@ -37,6 +37,11 @@ header > div:first-child {
   color: rgb(43, 43, 119);
   font-size: 1.1rem;
 }
+body>div:nth-child(3){
+  margin: 0 10vw;
+  padding: 20px;
+  width: min-content;
+}
 .modal > div > button {
   background-color: blue;
   color: white;
@@ -55,7 +60,7 @@ header > div:first-child {
 }
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 310px));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
   margin-top: 20px;
 }
