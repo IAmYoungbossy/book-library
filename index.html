@@ -21,27 +21,26 @@
     </button>
     <div class="card-container"></div>
     <div class="modal">
-      <form action="#" method="get" accept-charset="utf-8">
+      <form action="#" method="post" accept-charset="utf-8">
         <div>
           <label for="book-title">Book Title</label>
           <input type="text" name="book-title" id="book-title" />
         </div>
         <div>
           <label for="book-name">Author Name</label>
-          <input type="text" name="book-name" id="book-author" />
+          <input type="text" name="book-name" id="book-author" required/>
         </div>
         <div>
           <label for="book-page">Number Of Pages</label>
-          <input type="number" name="book-page" id="book-pages" />
+          <input type="number" name="book-page" id="book-pages" required/>
         </div>
         <div>
           <label for="read">Check If Read</label>
           <input type="checkbox" name="read" id="read" />
         </div>
+        <button type="button" id="add-book">Add Book</button>
       </form>
-      <div>
-        <button id="add-book">Add Book</button>
-      </div>
+      
     </div>
     
   </body>

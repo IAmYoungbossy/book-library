@@ -42,6 +42,18 @@ body>div:nth-child(3){
   margin: 0 10vw;
   padding: 20px;
 }
+form{
+  width: 250px;
+  margin: auto;
+  background-color: white;
+  padding: 40px 20px;
+}
+form>div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 10px;
+}
 .modal > div > button {
   background-color: blue;
   color: white;
