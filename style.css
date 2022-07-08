@@ -10,7 +10,7 @@ body {
 }
 body > button:nth-child(2) {
   padding: 5px 10px;
-  margin: 50px auto 0;
+  margin: 20px auto 0;
   font-size: 2rem;
   width: 200px;
   border: none;
@@ -32,6 +32,8 @@ header > div:last-of-type > button {
   font-size: 1rem;
   font-weight: bold;
   padding: 10px 20px;
+  background-color: #596D48;
+  color: white;
 }
 header > div:first-child {
   display: flex;
@@ -53,6 +55,29 @@ form>div {
   text-align: left;
   margin-top: 10px;
 }
+form>div:last-of-type {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+form>div:last-of-type>label {
+  position: relative;
+  right: 38px;
+}
+form>div:last-of-type>input {
+  position: absolute;
+  right: 98px;
+  top: 3px;
+}
+form>button {
+  margin-top: 1.2vw;
+	box-sizing: border-box;
+  padding: 5px 20px;
+  background-color: #596D48;
+  color: white;
+  border-radius: 5px;
+}
 .modal > div > button {
   background-color: blue;
   color: white;
@@ -68,6 +93,14 @@ form>div {
 .cards > p:first-of-type {
   font-style: italic;
   color: blue;
+}
+.cards > button {
+  margin: 1.2vw;
+	box-sizing: border-box;
+  padding: 5px 20px;
+  background-color: #596D48;
+  color: white;
+  border-radius: 5px;
 }
 .card-container {
   display: grid;
@@ -85,8 +118,8 @@ form>div {
   justify-content: center;
   align-content: center;
   background-color: rgba(0, 0, 0, 0.5);
-  /* opacity: 0;
-  visibility: hidden; */
+  opacity: 0;
+  visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
@@ -104,4 +137,59 @@ form>div {
   visibility: visible;
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+label,
+input {
+  box-sizing: border-box;
+}
+label {
+  display: inline-block;
+  font-size: 1.2vw;
+  margin-bottom: 2px;
+}
+input {
+  border: 1px solid #E5E7EB;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+input + span {
+  position: relative;
+}
+input + span::before {
+  position: absolute;
+  right: -15vw;
+  top: -3.2vh;
+}
+input[pattern]:not(:placeholder-shown):not(:focus):invalid + span::before {
+  content: "❌";
+  color: red;
+}
+input[pattern]:not(:placeholder-shown):invalid {
+  border: 1px solid red;
+  box-shadow: 1px 2px 2px rgb(238, 174, 174);
+}
+input[pattern]:not(:placeholder-shown):valid + span::before {
+  content: "✔️";
+  color: green;
+}
+input[pattern]:not(:placeholder-shown):valid {
+  border: 1px solid green;
+}
+input:focus {
+  outline: none;
+  border: 1px solid blue;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(188, 188, 223);
+}
+input[pattern]:invalid:focus:not(:placeholder-shown) {
+  border: 1px solid red;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+input[pattern]:hover,
+input:focus {
+  background-color: #eee;
 }
