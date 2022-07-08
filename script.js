@@ -50,7 +50,7 @@ function createCard(book) {
   numberOfPages.textContent = `${book.pages} Pages`;
   readStatus.textContent = book.readState();
   removeBook.textContent = "Remove";
-  card.classList.add("cards", "cards>p:first-of-type");
+  card.classList.add("cards", "cards>p:first-of-type", ".cards>button");
 
   removeBook.addEventListener("click", () => {
     bookLibrary.splice(bookLibrary.indexOf(book), 1);

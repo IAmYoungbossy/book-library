@@ -89,18 +89,21 @@ form>button {
   box-sizing: border-box;
   padding: 15px;
   text-align: center;
+  position: relative;
 }
 .cards > p:first-of-type {
   font-style: italic;
   color: blue;
 }
 .cards > button {
-  margin: 1.2vw;
+  margin: 0 1.2vw;
 	box-sizing: border-box;
   padding: 5px 20px;
   background-color: #596D48;
   color: white;
   border-radius: 5px;
+  position: absolute;
+  bottom: 25px;
 }
 .card-container {
   display: grid;
