@@ -71,7 +71,7 @@ function updateCardDisplay() {
   } else displayCards();
 }
 addBook.addEventListener("click", () => {
-  pushToBookLibrary(), updateCardDisplay();
+  pushToBookLibrary(), updateCardDisplay(), toggleModal();
 });
 displayCards();
 function toggleModal() {
