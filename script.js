@@ -49,7 +49,7 @@ function createCard(book) {
   bookAuthors.textContent = `By ${book.author}`;
   numberOfPages.textContent = `${book.pages} Pages`;
   readStatus.textContent = book.readState();
-  removeBook.textContent = "Remove";
+  removeBook.textContent = "Delete";
   card.classList.add("cards", "cards>p:first-of-type", ".cards>button");
 
   removeBook.addEventListener("click", () => {
