@@ -70,6 +70,10 @@ form>div:last-of-type>input {
   right: 98px;
   top: 3px;
 }
+form>div:last-of-type>input:focus{
+  border-radius: 5px;
+  box-shadow: 0 0 0 rgb(188, 188, 223)
+}
 form>button {
   margin-top: 1.2vw;
 	box-sizing: border-box;
