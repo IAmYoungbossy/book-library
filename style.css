@@ -176,7 +176,7 @@ input[pattern]:not(:placeholder-shown):not(:focus):invalid + span::before {
   content: "❌";
   color: red;
 }
-input[pattern]:not(:placeholder-shown):invalid {
+.input:placeholder-shown {
   border: 1px solid red;
   box-shadow: 1px 2px 2px rgb(238, 174, 174);
 }
