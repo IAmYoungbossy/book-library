@@ -11,21 +11,23 @@ const input = document.querySelectorAll(".input-field");
 
 let bookLibrary = [];
 
-function Book(title, author, pages, checkValue) {
-  if (this instanceof Book === false) {
-    return new Book(title, author, pages, checkValue);
+class Book {
+  constructor(title, author, pages, checkValue) {
+    if (this instanceof Book === false) {
+      return new Book(title, author, pages, checkValue);
+    }
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.checkValue = checkValue;
   }
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.checkValue = checkValue;
+  readState() {
+    return this.checkValue ? "Read" : "Unread";
+  }
+  toggleRead() {
+    return this.checkValue ? (this.checkValue = false) : (this.checkValue = true);
+  }
 }
-Book.prototype.readState = function () {
-  return this.checkValue ? "Read" : "Unread";
-};
-Book.prototype.toggleRead = function () {
-  return this.checkValue ? (this.checkValue = false) : (this.checkValue = true);
-};
 function pushToBookLibrary() {
   bookLibrary.push(
     new Book(bookTitle.value, bookAuthor.value, bookPages.value, check.checked)
