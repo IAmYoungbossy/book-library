@@ -72,19 +72,21 @@ function updateCardDisplay() {
   } else displayCards();
 }
 function checkForInvalidOrEmptyInput(){
-  if (bookAuthor.value == '') {
+  if (bookTitle.value == '') {
     addBook.disabled = true;
     bookAuthor.classList.add('input');
       setTimeout(function () {
         addBook.disabled = false;
       }, 1);
-  } else if (bookTitle.value == ''){
+  }
+  if (bookAuthor.value == ''){
     addBook.disabled = true;
     bookTitle.classList.add('input');
       setTimeout(function () {
         addBook.disabled = false;
       }, 1);
-  } else if (bookPages.value == '') {
+  }
+  if (bookPages.value == '') {
     addBook.disabled = true;
     bookPages.classList.add('input');
       setTimeout(function () {

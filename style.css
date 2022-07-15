@@ -155,7 +155,7 @@ input {
 }
 label {
   display: inline-block;
-  font-size: 1.2vw;
+  font-size: max(13px, 1.2vw);
   margin-bottom: 2px;
 }
 input {
