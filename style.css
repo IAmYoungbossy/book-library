@@ -95,13 +95,14 @@ form>button {
   text-align: center;
   position: relative;
   line-height: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px black;
 }
 .cards > p:first-of-type {
   font-style: italic;
   color: blue;
 }
 .cards > button {
-  /* margin: 0 1.2vw; */
 	box-sizing: border-box;
   padding: 5px 20px;
   background-color: #596D48;
