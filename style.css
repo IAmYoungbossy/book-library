@@ -101,7 +101,7 @@ form>button {
   color: blue;
 }
 .cards > button {
-  margin: 0 1.2vw;
+  /* margin: 0 1.2vw; */
 	box-sizing: border-box;
   padding: 5px 20px;
   background-color: #596D48;
@@ -111,7 +111,10 @@ form>button {
   bottom: 25px;
 }
 .cards > button:first-of-type {
-  left: 50px;
+  left: 70px;
+}
+.cards > button:last-of-type {
+  right: 70px;
 }
 .card-container {
   display: grid;
