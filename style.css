@@ -119,9 +119,11 @@ form>button {
 }
 .cards > button:first-of-type {
   left: 70px;
+  margin-right: 10px;
 }
 .cards > button:last-of-type {
   right: 70px;
+  margin-left: 10px;
 }
 .card-container {
   display: grid;
